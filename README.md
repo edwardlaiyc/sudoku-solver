@@ -1,16 +1,58 @@
-# React + Vite
+# Full-Stack Sudoku Solver
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, responsive web application that solves any valid Sudoku puzzle in real-time. This project integrates a **Recursive Backtracking algorithm** (Python) with a modern **React** frontend, deployed as a serverless application.
 
-Currently, two official plugins are available:
+🔗 **[Live Demo](https://your-vercel-link-here.vercel.app)** *(Replace with your actual Vercel link)*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+* **Recursive Backtracking Algorithm:** Solves complex puzzles efficiently using a Python-based Depth-First Search approach.
+* **Real-Time Validation:** Instantly solves valid grids and detects unsolvable board states.
+* **Smart UI:** Distinguishes between user inputs (White) and the computer's generated solution (Green).
+* **Responsive Design:** Fully centered, dark-themed grid built with **Tailwind CSS**.
+* **Serverless Architecture:** Backend runs as an on-demand Python function via Vercel.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+* **Frontend:** React, Vite, Tailwind CSS
+* **Backend:** Python 3.9, Flask (REST API)
+* **Deployment:** Vercel (Serverless Functions)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 Project Structure
+
+```text
+sudoku-solver/
+├── api/                  # Python Backend (Flask)
+│   └── index.py          # Solver Logic & API Endpoint
+├── src/                  # React Frontend
+│   ├── components/       # UI Components (SudokuGrid.jsx)
+│   └── App.jsx           # Main Entry Point
+├── vercel.json           # Serverless Routing Config
+└── requirements.txt      # Python Dependencies
+
+## ⚡ How to Run Locally
+
+To run this project on your machine, you need to start both the Frontend (React) and Backend (Python) servers.
+
+### 1. Clone the repository
+```bash
+git clone [https://github.com/YOUR_USERNAME/sudoku-solver.git](https://github.com/YOUR_USERNAME/sudoku-solver.git)
+cd sudoku-solver
+
+### 2. Setup Frontend
+```bash
+npm install
+npm run dev
+
+### 3. Setup Backend
+Open a new terminal window:
+```bash
+# Optional: Create a virtual environment
+# python -m venv venv
+# source venv/bin/activate  (Mac/Linux) or venv\Scripts\activate (Windows)
+
+pip install -r requirements.txt
+python api/index.py
+
+### 4. Connect
+The project is configured with a local proxy in `vite.config.js`. Requests made to `/api/solve` from the frontend will automatically forward to the Python backend at port 5000.
