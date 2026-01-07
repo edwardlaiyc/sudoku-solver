@@ -2,9 +2,9 @@
 
 A clean, responsive web application that solves any valid Sudoku puzzle in real-time. This project integrates a **Recursive Backtracking algorithm** (Python) with a modern **React** frontend, deployed as a serverless application.
 
-🔗 **[Live Demo](https://your-vercel-link-here.vercel.app)** *(Replace with your actual Vercel link)*
+**[Live Demo](https://edward-sudoku-solver.vercel.app/)**
 
-## 🚀 Features
+## Features
 
 * **Recursive Backtracking Algorithm:** Solves complex puzzles efficiently using a Python-based Depth-First Search approach.
 * **Real-Time Validation:** Instantly solves valid grids and detects unsolvable board states.
@@ -12,13 +12,13 @@ A clean, responsive web application that solves any valid Sudoku puzzle in real-
 * **Responsive Design:** Fully centered, dark-themed grid built with **Tailwind CSS**.
 * **Serverless Architecture:** Backend runs as an on-demand Python function via Vercel.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **Frontend:** React, Vite, Tailwind CSS
 * **Backend:** Python 3.9, Flask (REST API)
 * **Deployment:** Vercel (Serverless Functions)
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 sudoku-solver/
@@ -30,7 +30,7 @@ sudoku-solver/
 ├── vercel.json           # Serverless Routing Config
 └── requirements.txt      # Python Dependencies
 
-## ⚡ How to Run Locally
+## How to Run Locally
 
 To run this project on your machine, you need to start both the Frontend (React) and Backend (Python) servers.
 
